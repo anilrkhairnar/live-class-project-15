@@ -1,0 +1,515 @@
+:root {
+  --main-bg: #ca1a27;
+  --bg-primary: #111111;
+  --bg-secondary: #181818;
+  --bg-third: #1e1e1e;
+  --color-primary: #f04040;
+  --color-secondary: #ffffff;
+  --color-third: #cccccc;
+}
+html {
+  background-color: var(--color-primary);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.link i {
+  font-size: 1rem;
+  transition: 0.2s linear;
+}
+.btn {
+  all: unset;
+  padding: 1.4rem 2rem;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1px;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: var(--main-bg);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--color-secondary);
+}
+
+/* ------------- navbar ------------ */
+nav {
+  padding: 2rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 5rem;
+  cursor: pointer;
+}
+nav .menu-icon {
+  display: none;
+}
+nav .nav-list {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  list-style: none;
+}
+nav .nav-list .list-item a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.2s ease-in-out;
+}
+nav .nav-list .list-item i {
+  padding: 0 0.8rem;
+  color: var(--color-secondary);
+}
+nav .nav-list .list-item a:hover ~ i,
+nav .nav-list .list-item a:hover {
+  color: var(--color-primary);
+}
+nav .nav-list .list-item.active a::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* --------------------------------- */
+
+/* --------- hero section ---------- */
+
+.hero-section {
+  padding: 0 10%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+.hero-section .hero-left {
+  width: 50%;
+  height: 100%;
+}
+.hero-section .hero-left .hero-image {
+  width: 100%;
+}
+.hero-section .hero-right {
+  align-self: center;
+}
+.hero-section .hero-right span {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.hero-section .hero-right h1 {
+  font-size: 3.5rem;
+  font-family: sans-serif;
+  color: var(--color-secondary);
+  line-height: 4.8rem;
+}
+.hero-section .hero-right p {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  color: var(--color-third);
+}
+.hero-section .hero-right {
+  width: 50%;
+}
+/* ---------------------------------- */
+
+/* ----------- experience ----------- */
+
+.experience-section {
+  padding: 6rem 10%;
+  position: relative;
+  display: flex;
+  gap: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--bg-secondary);
+  z-index: -1;
+}
+.experience-section .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.experience-section .cards .card {
+  padding: 3rem 1rem 3rem 3rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: var(--bg-third);
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+
+.experience-section .cards .card img {
+  height: 3.5rem;
+}
+.experience-section .cards .card h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.experience-section .cards .card p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--color-third);
+}
+.experience-section .cards .card.active {
+  background-color: var(--color-primary);
+}
+.experience-section .cards .card.active .link {
+  color: var(--color-secondary);
+}
+.experience-section .cards .card:hover {
+  transform: scale(1.03);
+}
+.experience-section .cards .card:hover .link i {
+  transform: translateX(1rem);
+}
+.experience-section .experiences {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+.experience-section .experiences h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 7rem;
+  color: var(--color-primary);
+}
+.experience-section .experiences h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.experience-section .experiences .exp-cards {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+}
+.experience-section .experiences .exp-cards .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.experience-section .experiences .exp-cards .row .exp-card {
+  width: 20rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-third);
+}
+.experience-section .experiences .exp-cards .row .exp-card h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+/* ---------------------------------- */
+
+/* ----------- projects ----------- */
+
+.projects-section {
+  padding: 3rem 17%;
+  width: 100%;
+}
+.projects-section .heading {
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.projects-section .heading h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.projects-section .heading p {
+  font-size: 0.9rem;
+  color: var(--color-third);
+}
+
+.projects-section .projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+}
+.projects-section .projects .project {
+  margin-bottom: 2rem;
+  width: 25rem;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.projects-section .projects .project .project-top {
+  padding: 2.5rem 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-third);
+  overflow: hidden;
+}
+.projects-section .projects .project .project-top img {
+  width: 100%;
+  transition: 0.2s linear;
+}
+.projects-section .projects .project:hover .project-top img {
+  transform: scale(1.1);
+}
+.projects-section .projects .project .project-bottom {
+  margin-top: 1rem;
+}
+.projects-section .projects .project .project-bottom h3 {
+  font-size: 1.3rem;
+}
+.projects-section .projects .project:hover .link i {
+  transform: translateX(1rem);
+}
+/* ---------------------------------- */
+
+/* -------------- contact ----------- */
+
+.contact-section {
+  margin: 4rem 18%;
+  padding: 4rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bg-third);
+}
+.contact-section div {
+  width: 55%;
+}
+.contact-section div h1 {
+  margin-bottom: 1rem;
+  font-size: 2.7rem;
+}
+.contact-section div p {
+  font-size: 0.9rem;
+  color: var(--color-third);
+}
+
+/* ---------------------------------- */
+
+/* -------------- navigator ----------- */
+
+.navigator {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigator ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.navigator ul li a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-third);
+  transition: 0.2s linear;
+}
+.navigator ul li a:hover {
+  color: var(--color-primary);
+}
+
+/* ---------------------------------- */
+
+/* -------------- footer ----------- */
+footer {
+  padding: 3rem 18%;
+  background-color: var(--bg-third);
+}
+footer div {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .logo {
+  position: absolute;
+  left: 0;
+  width: 5rem;
+  cursor: pointer;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 3rem;
+}
+footer ul li img {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+footer ul li img:hover {
+  transform: scale(1.3);
+}
+
+/* --------- responsive design ------------- */
+
+@media only screen and (max-width: 1236px) {
+  .projects-section .projects .project {
+    width: 22rem;
+  }
+  .contact-section div h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 1088px) {
+  html {
+    font-size: 90%;
+  }
+  .hero-section .hero-right p {
+    margin: 1rem 0;
+  }
+  .projects-section .projects .project {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  p {
+    font-size: 0.8rem;
+  }
+  .hero-section .hero-right h1 {
+    font-size: 3rem;
+  }
+  .hero-section .hero-right p {
+    font-size: 0.8rem;
+  }
+  .contact-section div h1 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 829px) {
+  nav .menu-icon {
+    display: block;
+  }
+  nav .menu-icon img {
+    width: 2rem;
+  }
+  nav .nav-list {
+    display: none;
+  }
+  .hero-section .hero-right h1 {
+    line-height: 3.5rem;
+  }
+  .experience-section .experiences .exp-cards .row {
+    justify-content: center;
+  }
+  .projects-section .heading {
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact-section div {
+    width: 80%;
+    text-align: center;
+  }
+  footer div {
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 737px) {
+  html {
+    font-size: 100%;
+  }
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .hero-section .hero-left {
+    width: 100%;
+  }
+  .hero-section .hero-right {
+    width: 70%;
+    text-align: center;
+  }
+  .experience-section .cards {
+    gap: 3rem;
+  }
+  .experience-section .cards .card {
+    width: 26rem;
+  }
+  .experience-section .experiences .exp-cards,
+  .experience-section .experiences .exp-cards .row {
+    gap: 3rem;
+  }
+  .experience-section .experiences .exp-cards .row .exp-card {
+    width: 26rem;
+    height: 10rem;
+  }
+  .projects-section .projects .project .project-top {
+    padding: 1.5rem 1rem;
+  }
+  footer div {
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .hero-section .hero-right {
+    width: 100%;
+  }
+  .experience-section .experiences .exp-cards .row .exp-card {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) {
+  html {
+    font-size: 80%;
+  }
+  footer .logo {
+    width: 3.5rem;
+  }
+  footer ul li img {
+    width: 1rem;
+    height: 1rem;
+  }
+}
